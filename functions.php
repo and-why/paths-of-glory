@@ -121,10 +121,8 @@ add_action( 'widgets_init', 'paths_of_glory_widgets_init' );
  */
 function paths_of_glory_scripts() {
 	wp_enqueue_style( 'paths_of_glory-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'paths_of_glory-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'paths_of_glory-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	
+	wp_enqueue_script( 'paths_of_glory-javascript', get_template_directory_uri() . '/js/app.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

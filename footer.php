@@ -14,17 +14,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'paths_of_glory' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'paths_of_glory' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
+		<div class="site-info container-add">
+			
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'paths_of_glory' ), 'paths_of_glory', '<a href="http://andysmith.is">Andy Smith</a>' );
+				printf( esc_html__( '%1$s by %2$s.', 'Andy Smith' ), 'Website', '<a href="http://andysmith.is">Andy Smith</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

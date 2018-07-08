@@ -25,24 +25,26 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'paths_of_glory' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="header-container container-add">
+			<div class="site-branding">	
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$paths_of_glory_description = get_bloginfo( 'description', 'display' );
-			if ( $paths_of_glory_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $paths_of_glory_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+				the_custom_logo();
+				if ( is_front_page() && is_home() ) :
+					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif;
+				$paths_of_glory_description = get_bloginfo( 'description', 'display' );
+				if ( $paths_of_glory_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $paths_of_glory_description; /* WPCS: xss ok. */ ?></p>
+				<?php endif; ?>
+			</div><!-- .site-branding -->
+	
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'paths_of_glory' ); ?></button>
@@ -53,6 +55,7 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
